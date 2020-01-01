@@ -16,11 +16,11 @@ function objToSql(ob) {
     for (var key in ob) {
         var value = ob[key];
 
-        if (Object.hasOwnPropery.call(ob, key)) {
+        if (Object.hasOwnProperty.call(ob, key)) {
             if (typeof value === "string" && value.indexOf(" ") >= 0) {
                 value = "'" + value + "'";
             }
-            arr.push(key + "=" + value);
+            arr.push(key + " = " + value);
         }
     }
     return arr.toString();
@@ -56,7 +56,7 @@ var orm = {
     updateOne: function(table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
 
-        queryString += " SET";
+        queryString += " SET ";
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition;
