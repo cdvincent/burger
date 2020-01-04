@@ -5,7 +5,7 @@ $(function() {
         var isDevoured = {
             devoured: 1
         };
-
+        
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: isDevoured
@@ -13,10 +13,10 @@ $(function() {
             function() {
                 console.log("burger devoured", isDevoured);
                 location.reload();
-            });
+            })
         });
         
-        $(".create-form").on("submit", function(event) {
+        $("#submit").on("click", function(event) {
 
             event.preventDefault();
             
@@ -24,6 +24,11 @@ $(function() {
                 burger_name: $("#burger").val().trim(),
                 devoured: 0
             };
+
+            if (newBurger.burger_name === "") {
+
+                return false;
+            } else {
             
             $.ajax("/api/burgers", {
                 type: "POST",
@@ -33,6 +38,7 @@ $(function() {
                     console.log("created new burger");
                     location.reload();
                 });
+            }
             });
             
         });

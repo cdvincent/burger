@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(165, 125, 73);
+}
+
+h3 {
+    color: green;
+    text-align: center;
+}
+
+#header {
+    background-color: brown;
+    color: yellow;
+}
+
+.jumbotron h2{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.container {
+    margin: 5% auto;
+    background-color: tan;
+    border-radius: 20px;
+}
+
+#devoured {
+    
+    background-color: wheat;
+    margin: 5%;
+    border-radius: 10px;
+}
+
+#isDevoured {
+    background-color: rgb(165, 125, 73);
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#notDevoured {
+    background-color: rgb(165, 125, 73);
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#burgerImg {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+#formAlign {
+    text-align: center;
+    margin-bottom: 5%
+}
